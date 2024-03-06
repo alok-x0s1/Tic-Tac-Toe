@@ -22,7 +22,7 @@ export const Board = () => {
   const winner = calculateWinner(square);
   let status;
   if (winner) {
-    status = "Winner : " + winner
+    status = "Winner Player : " + winner
   } else {
     status = "Next Player : " + (xIsNext ? "X" : "O");
   }
@@ -74,7 +74,7 @@ export const Board = () => {
           <Button value={square[8]} clickFunc={() => handleClick(8)} />
         </div>
       </div>
-      {winner ? (<button className="mt-4 bg-slate-500 p-4 rounded-lg text-black" onClick={handleRestart}>Restart</button>) : ""}
+      {winner ? (<button className="mt-4 bg-slate-500 p-2 rounded-lg text-black" onClick={handleRestart}>Restart</button>) : ""}
     </div>
   );
 };
